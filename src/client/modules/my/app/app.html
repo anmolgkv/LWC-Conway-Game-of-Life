@@ -1,0 +1,26 @@
+<template>
+    <div class="container center">
+        <h1>Conway's game of life</h1>
+        <table>
+            <template for:each={board} for:item="row" for:index="rowIndex">
+                <tr key={row.id}>
+                    <template
+                        for:each={row.cells}
+                        for:item="cell"
+                        for:index="columnIndex"
+                    >
+                        <td
+                            key={cell.id}
+                            class={cell.className}
+                            data-row-index={rowIndex}
+                            data-column-index={columnIndex}
+                            onclick={toggelState}
+                        ></td>
+                    </template>
+                </tr>
+            </template>
+        </table>
+
+        <button label="next" onclick={next}>Next</button>
+    </div>
+</template>

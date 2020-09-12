@@ -1,0 +1,29 @@
+.center {
+    text-align: center;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+}
+
+.cell {
+    outline: 1px solid black;
+    width: 30px;
+    height: 30px;
+}
+
+.alive {
+    background-color: black;
+}
+
+.dead {
+    background-color: aliceblue;
+}
