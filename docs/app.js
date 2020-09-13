@@ -1,45 +1,45 @@
 !(function (t) {
     function e(e) {
         for (
-            var r, a, i = e[0], l = e[1], c = e[2], p = 0, h = [];
-            p < i.length;
-            p++
+            var a, o, n = e[0], i = e[1], d = e[2], h = 0, u = [];
+            h < n.length;
+            h++
         )
-            (a = i[p]),
-                Object.prototype.hasOwnProperty.call(s, a) &&
-                    s[a] &&
-                    h.push(s[a][0]),
-                (s[a] = 0);
-        for (r in l)
-            Object.prototype.hasOwnProperty.call(l, r) && (t[r] = l[r]);
-        for (u && u(e); h.length; ) h.shift()();
-        return o.push.apply(o, c || []), n();
+            (o = n[h]),
+                Object.prototype.hasOwnProperty.call(l, o) &&
+                    l[o] &&
+                    u.push(l[o][0]),
+                (l[o] = 0);
+        for (a in i)
+            Object.prototype.hasOwnProperty.call(i, a) && (t[a] = i[a]);
+        for (c && c(e); u.length; ) u.shift()();
+        return r.push.apply(r, d || []), s();
     }
-    function n() {
-        for (var t, e = 0; e < o.length; e++) {
-            for (var n = o[e], r = !0, i = 1; i < n.length; i++) {
-                var l = n[i];
-                0 !== s[l] && (r = !1);
+    function s() {
+        for (var t, e = 0; e < r.length; e++) {
+            for (var s = r[e], a = !0, n = 1; n < s.length; n++) {
+                var i = s[n];
+                0 !== l[i] && (a = !1);
             }
-            r && (o.splice(e--, 1), (t = a((a.s = n[0]))));
+            a && (r.splice(e--, 1), (t = o((o.s = s[0]))));
         }
         return t;
     }
-    var r = {},
-        s = { 1: 0 },
-        o = [];
-    function a(e) {
-        if (r[e]) return r[e].exports;
-        var n = (r[e] = { i: e, l: !1, exports: {} });
-        return t[e].call(n.exports, n, n.exports, a), (n.l = !0), n.exports;
+    var a = {},
+        l = { 1: 0 },
+        r = [];
+    function o(e) {
+        if (a[e]) return a[e].exports;
+        var s = (a[e] = { i: e, l: !1, exports: {} });
+        return t[e].call(s.exports, s, s.exports, o), (s.l = !0), s.exports;
     }
-    (a.m = t),
-        (a.c = r),
-        (a.d = function (t, e, n) {
-            a.o(t, e) ||
-                Object.defineProperty(t, e, { enumerable: !0, get: n });
+    (o.m = t),
+        (o.c = a),
+        (o.d = function (t, e, s) {
+            o.o(t, e) ||
+                Object.defineProperty(t, e, { enumerable: !0, get: s });
         }),
-        (a.r = function (t) {
+        (o.r = function (t) {
             'undefined' != typeof Symbol &&
                 Symbol.toStringTag &&
                 Object.defineProperty(t, Symbol.toStringTag, {
@@ -47,29 +47,29 @@
                 }),
                 Object.defineProperty(t, '__esModule', { value: !0 });
         }),
-        (a.t = function (t, e) {
-            if ((1 & e && (t = a(t)), 8 & e)) return t;
+        (o.t = function (t, e) {
+            if ((1 & e && (t = o(t)), 8 & e)) return t;
             if (4 & e && 'object' == typeof t && t && t.__esModule) return t;
-            var n = Object.create(null);
+            var s = Object.create(null);
             if (
-                (a.r(n),
-                Object.defineProperty(n, 'default', {
+                (o.r(s),
+                Object.defineProperty(s, 'default', {
                     enumerable: !0,
                     value: t
                 }),
                 2 & e && 'string' != typeof t)
             )
-                for (var r in t)
-                    a.d(
-                        n,
-                        r,
+                for (var a in t)
+                    o.d(
+                        s,
+                        a,
                         function (e) {
                             return t[e];
-                        }.bind(null, r)
+                        }.bind(null, a)
                     );
-            return n;
+            return s;
         }),
-        (a.n = function (t) {
+        (o.n = function (t) {
             var e =
                 t && t.__esModule
                     ? function () {
@@ -78,124 +78,529 @@
                     : function () {
                           return t;
                       };
-            return a.d(e, 'a', e), e;
+            return o.d(e, 'a', e), e;
         }),
-        (a.o = function (t, e) {
+        (o.o = function (t, e) {
             return Object.prototype.hasOwnProperty.call(t, e);
         }),
-        (a.p = './');
-    var i = (window.webpackJsonp = window.webpackJsonp || []),
-        l = i.push.bind(i);
-    (i.push = e), (i = i.slice());
-    for (var c = 0; c < i.length; c++) e(i[c]);
-    var u = l;
-    o.push([2, 0]), n();
+        (o.p = './');
+    var n = (window.webpackJsonp = window.webpackJsonp || []),
+        i = n.push.bind(n);
+    (n.push = e), (n = n.slice());
+    for (var d = 0; d < n.length; d++) e(n[d]);
+    var c = i;
+    r.push([2, 0]), s();
 })([
     ,
-    function (t, e, n) {
+    function (t, e, s) {
         'use strict';
         Object.defineProperty(e, '__esModule', { value: !0 }),
             (e.default = void 0);
     },
-    function (t, e, n) {
-        t.exports = n(4);
+    function (t, e, s) {
+        t.exports = s(4);
     },
     function (t, e) {
-        var n;
-        n = (function () {
+        var s;
+        s = (function () {
             return this;
         })();
         try {
-            n = n || new Function('return this')();
+            s = s || new Function('return this')();
         } catch (t) {
-            'object' == typeof window && (n = window);
+            'object' == typeof window && (s = window);
         }
-        t.exports = n;
+        t.exports = s;
     },
-    function (t, e, n) {
+    function (t, e, s) {
         'use strict';
-        n.r(e);
-        var r = n(0);
-        var s = [
-            function (t, e, n) {
+        s.r(e);
+        var a = s(0);
+        var l = [
+            function (t, e, s) {
                 return [
-                    '.center',
+                    '.cell',
                     e,
-                    '{text-align:center}.container',
-                    e,
-                    '{margin-top:30px;display:flex;flex-direction:column;justify-content:center;align-items:center}table',
-                    e,
-                    '{width:80%}.cell',
-                    e,
-                    '{outline:1px solid #000;width:30px;height:30px}.alive',
-                    e,
-                    '{background-color:#000}.dead',
-                    e,
-                    '{background-color:#f0f8ff}'
+                    '{outline:1px solid #c7c2c2;width:30px;height:30px}'
                 ].join('');
             }
         ];
-        function o(t, e, n, r) {
-            const { t: s, h: o, k: a, b: i, i: l } = t,
-                { _m0: c, _m1: u } = r;
+        function r(t, e, s, a) {
+            const { t: l, h: r, b: o, k: n, i: i, gid: d } = t,
+                {
+                    _m0: c,
+                    _m1: h,
+                    _m2: u,
+                    _m3: p,
+                    _m4: m,
+                    _m5: g,
+                    _m6: y,
+                    _m7: f,
+                    _m8: b
+                } = a;
             return [
-                o('div', { classMap: { container: !0, center: !0 }, key: 5 }, [
-                    o('h1', { key: 0 }, [s("Conway's game of life")]),
-                    o(
-                        'table',
-                        { key: 3 },
-                        l(e.board, function (t, n) {
-                            return o(
-                                'tr',
-                                { key: a(2, t.id) },
-                                l(t.cells, function (t, s) {
-                                    return o(
-                                        'td',
-                                        {
-                                            className: t.className,
-                                            attrs: {
-                                                'data-row-index': n,
-                                                'data-column-index': s
-                                            },
-                                            key: a(1, t.id),
-                                            on: {
-                                                click:
-                                                    c ||
-                                                    (r._m0 = i(e.toggelState))
-                                            }
-                                        },
-                                        []
-                                    );
-                                })
-                            );
-                        })
-                    ),
-                    o(
-                        'button',
+                r('div', { classMap: { 'slds-card': !0 }, key: 30 }, [
+                    r(
+                        'div',
                         {
-                            attrs: { label: 'next' },
-                            key: 4,
-                            on: { click: u || (r._m1 = i(e.next)) }
+                            classMap: {
+                                'slds-card__header': !0,
+                                'slds-grid': !0
+                            },
+                            key: 8
                         },
-                        [s('Next')]
+                        [
+                            r(
+                                'header',
+                                {
+                                    classMap: {
+                                        'slds-media': !0,
+                                        'slds-media_center': !0,
+                                        'slds-has-flexi-truncate': !0
+                                    },
+                                    key: 7
+                                },
+                                [
+                                    r(
+                                        'div',
+                                        {
+                                            classMap: {
+                                                'slds-media__body': !0
+                                            },
+                                            key: 1
+                                        },
+                                        [
+                                            r(
+                                                'h2',
+                                                {
+                                                    classMap: {
+                                                        'slds-card__header-title': !0
+                                                    },
+                                                    key: 0
+                                                },
+                                                [l("Conway's game of life")]
+                                            )
+                                        ]
+                                    ),
+                                    r(
+                                        'div',
+                                        {
+                                            classMap: { 'slds-no-flex': !0 },
+                                            key: 6
+                                        },
+                                        [
+                                            r(
+                                                'button',
+                                                {
+                                                    classMap: {
+                                                        'slds-button': !0,
+                                                        'slds-button_neutral': !0
+                                                    },
+                                                    key: 2,
+                                                    on: {
+                                                        click:
+                                                            c ||
+                                                            (a._m0 = o(e.next))
+                                                    }
+                                                },
+                                                [l('Next')]
+                                            ),
+                                            r(
+                                                'button',
+                                                {
+                                                    classMap: {
+                                                        'slds-button': !0,
+                                                        'slds-button_neutral': !0
+                                                    },
+                                                    key: 3,
+                                                    on: {
+                                                        click:
+                                                            h ||
+                                                            (a._m1 = o(e.reset))
+                                                    }
+                                                },
+                                                [l('Reset')]
+                                            ),
+                                            e.isAutoPlay
+                                                ? null
+                                                : r(
+                                                      'button',
+                                                      {
+                                                          classMap: {
+                                                              'slds-button': !0,
+                                                              'slds-button_neutral': !0
+                                                          },
+                                                          key: 4,
+                                                          on: {
+                                                              click:
+                                                                  u ||
+                                                                  (a._m2 = o(
+                                                                      e.play
+                                                                  ))
+                                                          }
+                                                      },
+                                                      [l('Play')]
+                                                  ),
+                                            e.isAutoPlay
+                                                ? r(
+                                                      'button',
+                                                      {
+                                                          classMap: {
+                                                              'slds-button': !0,
+                                                              'slds-button_neutral': !0
+                                                          },
+                                                          key: 5,
+                                                          on: {
+                                                              click:
+                                                                  p ||
+                                                                  (a._m3 = o(
+                                                                      e.stop
+                                                                  ))
+                                                          }
+                                                      },
+                                                      [l('Stop')]
+                                                  )
+                                                : null
+                                        ]
+                                    )
+                                ]
+                            )
+                        ]
+                    ),
+                    r(
+                        'div',
+                        {
+                            classMap: {
+                                'slds-card__body': !0,
+                                'slds-card__body_inner': !0
+                            },
+                            key: 29
+                        },
+                        [
+                            r(
+                                'div',
+                                { classMap: { 'slds-grid': !0 }, key: 28 },
+                                [
+                                    r(
+                                        'div',
+                                        {
+                                            classMap: {
+                                                'slds-col': !0,
+                                                'slds-size_10-of-12': !0
+                                            },
+                                            key: 12
+                                        },
+                                        [
+                                            r(
+                                                'table',
+                                                { key: 11 },
+                                                i(e.board, function (t, s) {
+                                                    return r(
+                                                        'tr',
+                                                        { key: n(10, t.id) },
+                                                        i(t.cells, function (
+                                                            t,
+                                                            l
+                                                        ) {
+                                                            return r(
+                                                                'td',
+                                                                {
+                                                                    className:
+                                                                        t.className,
+                                                                    style:
+                                                                        t.style,
+                                                                    attrs: {
+                                                                        'data-row-index': s,
+                                                                        'data-column-index': l
+                                                                    },
+                                                                    key: n(
+                                                                        9,
+                                                                        t.id
+                                                                    ),
+                                                                    on: {
+                                                                        click:
+                                                                            m ||
+                                                                            (a._m4 = o(
+                                                                                e.toggelState
+                                                                            ))
+                                                                    }
+                                                                },
+                                                                []
+                                                            );
+                                                        })
+                                                    );
+                                                })
+                                            )
+                                        ]
+                                    ),
+                                    r(
+                                        'div',
+                                        {
+                                            classMap: {
+                                                'slds-col': !0,
+                                                'slds-size_2-of-12': !0
+                                            },
+                                            key: 27
+                                        },
+                                        [
+                                            r(
+                                                'div',
+                                                {
+                                                    classMap: {
+                                                        'slds-form-element': !0,
+                                                        'slds-p-around_small': !0
+                                                    },
+                                                    key: 26
+                                                },
+                                                [
+                                                    r(
+                                                        'label',
+                                                        {
+                                                            classMap: {
+                                                                'slds-form-element__label': !0
+                                                            },
+                                                            attrs: {
+                                                                for:
+                                                                    '' +
+                                                                    d(
+                                                                        'text-input-id-1'
+                                                                    )
+                                                            },
+                                                            key: 13
+                                                        },
+                                                        [l('Size')]
+                                                    ),
+                                                    r(
+                                                        'div',
+                                                        {
+                                                            classMap: {
+                                                                'slds-grid': !0
+                                                            },
+                                                            key: 19
+                                                        },
+                                                        [
+                                                            r(
+                                                                'div',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-form-element__control': !0,
+                                                                        'slds-col': !0
+                                                                    },
+                                                                    key: 15
+                                                                },
+                                                                [
+                                                                    r(
+                                                                        'input',
+                                                                        {
+                                                                            classMap: {
+                                                                                'slds-input': !0
+                                                                            },
+                                                                            attrs: {
+                                                                                type:
+                                                                                    'number',
+                                                                                placeholder:
+                                                                                    'Enter height of board'
+                                                                            },
+                                                                            props: {
+                                                                                value:
+                                                                                    e.height
+                                                                            },
+                                                                            key: 14,
+                                                                            on: {
+                                                                                change:
+                                                                                    g ||
+                                                                                    (a._m5 = o(
+                                                                                        e.heightChangeHandler
+                                                                                    ))
+                                                                            }
+                                                                        },
+                                                                        []
+                                                                    )
+                                                                ]
+                                                            ),
+                                                            r(
+                                                                'div',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-col': !0,
+                                                                        'slds-p-top_x-small': !0
+                                                                    },
+                                                                    key: 16
+                                                                },
+                                                                [l('X')]
+                                                            ),
+                                                            r(
+                                                                'div',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-form-element__control': !0,
+                                                                        'slds-col': !0
+                                                                    },
+                                                                    key: 18
+                                                                },
+                                                                [
+                                                                    r(
+                                                                        'input',
+                                                                        {
+                                                                            classMap: {
+                                                                                'slds-input': !0
+                                                                            },
+                                                                            attrs: {
+                                                                                type:
+                                                                                    'number',
+                                                                                placeholder:
+                                                                                    'Enter width of board'
+                                                                            },
+                                                                            props: {
+                                                                                value:
+                                                                                    e.width
+                                                                            },
+                                                                            key: 17,
+                                                                            on: {
+                                                                                change:
+                                                                                    y ||
+                                                                                    (a._m6 = o(
+                                                                                        e.widthChangeHandler
+                                                                                    ))
+                                                                            }
+                                                                        },
+                                                                        []
+                                                                    )
+                                                                ]
+                                                            )
+                                                        ]
+                                                    ),
+                                                    r(
+                                                        'label',
+                                                        {
+                                                            classMap: {
+                                                                'slds-form-element__label': !0
+                                                            },
+                                                            attrs: {
+                                                                for:
+                                                                    '' +
+                                                                    d(
+                                                                        'text-input-id-1'
+                                                                    )
+                                                            },
+                                                            key: 20
+                                                        },
+                                                        [l('Alive Cell')]
+                                                    ),
+                                                    r(
+                                                        'div',
+                                                        {
+                                                            classMap: {
+                                                                'slds-form-element__control': !0
+                                                            },
+                                                            key: 22
+                                                        },
+                                                        [
+                                                            r(
+                                                                'input',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-input': !0
+                                                                    },
+                                                                    attrs: {
+                                                                        type:
+                                                                            'color'
+                                                                    },
+                                                                    props: {
+                                                                        value:
+                                                                            e.aliveColor
+                                                                    },
+                                                                    key: 21,
+                                                                    on: {
+                                                                        change:
+                                                                            f ||
+                                                                            (a._m7 = o(
+                                                                                e.aliveColorChangeHandler
+                                                                            ))
+                                                                    }
+                                                                },
+                                                                []
+                                                            )
+                                                        ]
+                                                    ),
+                                                    r(
+                                                        'label',
+                                                        {
+                                                            classMap: {
+                                                                'slds-form-element__label': !0
+                                                            },
+                                                            attrs: {
+                                                                for:
+                                                                    '' +
+                                                                    d(
+                                                                        'text-input-id-1'
+                                                                    )
+                                                            },
+                                                            key: 23
+                                                        },
+                                                        [l('Dead Cell')]
+                                                    ),
+                                                    r(
+                                                        'div',
+                                                        {
+                                                            classMap: {
+                                                                'slds-form-element__control': !0
+                                                            },
+                                                            key: 25
+                                                        },
+                                                        [
+                                                            r(
+                                                                'input',
+                                                                {
+                                                                    classMap: {
+                                                                        'slds-input': !0
+                                                                    },
+                                                                    attrs: {
+                                                                        type:
+                                                                            'color'
+                                                                    },
+                                                                    props: {
+                                                                        value:
+                                                                            e.deadColor
+                                                                    },
+                                                                    key: 24,
+                                                                    on: {
+                                                                        change:
+                                                                            b ||
+                                                                            (a._m8 = o(
+                                                                                e.deadColorChangeHandler
+                                                                            ))
+                                                                    }
+                                                                },
+                                                                []
+                                                            )
+                                                        ]
+                                                    )
+                                                ]
+                                            )
+                                        ]
+                                    )
+                                ]
+                            )
+                        ]
                     )
                 ])
             ];
         }
-        var a = Object(r.registerTemplate)(o);
-        (o.stylesheets = []),
-            s && o.stylesheets.push.apply(o.stylesheets, s),
-            (o.stylesheetTokens = {
+        var o = Object(a.registerTemplate)(r);
+        (r.stylesheets = []),
+            l && r.stylesheets.push.apply(r.stylesheets, l),
+            (r.stylesheetTokens = {
                 hostAttribute: 'my-app-_app-host',
                 shadowAttribute: 'my-app-_app'
             });
-        var i = n(1),
-            l = n.n(i),
-            c = { ALIVE: 1, DEAD: 0 };
-        var u = Object(r.registerComponent)(
+        var n = s(1),
+            i = s.n(n),
+            d = { ALIVE: 1, DEAD: 0 };
+        var c = Object(a.registerComponent)(
             class {
                 constructor(t) {
-                    if (!Object.values(c).includes(t))
+                    if (!Object.values(d).includes(t))
                         throw new Error('Invalid state');
                     this.state = t;
                 }
@@ -203,61 +608,102 @@
                     let e;
                     return (
                         (e =
-                            this.state !== c.ALIVE || (2 !== t && 3 !== t)
-                                ? this.state === c.DEAD && 3 === t
-                                    ? c.ALIVE
-                                    : c.DEAD
+                            this.state !== d.ALIVE || (2 !== t && 3 !== t)
+                                ? this.state === d.DEAD && 3 === t
+                                    ? d.ALIVE
+                                    : d.DEAD
                                 : this.state),
                         e
                     );
                 }
             },
-            { tmpl: l.a }
+            { tmpl: i.a }
         );
-        var p = Object(r.registerComponent)(
+        var h = Object(a.registerComponent)(
             class {
                 constructor(t) {
                     (this.numRows = t.length),
                         (this.numCols = t[0].length),
-                        (this.state = t.map((t) => t.map((t) => new u(t))));
+                        (this.state = t.map((t) => t.map((t) => new c(t))));
                 }
                 getState(t, e) {
                     return this.state[t][e];
                 }
                 getAliveNeigbhours(t, e) {
-                    const n = { [c.ALIVE]: 1, [c.DEAD]: 0 };
-                    let r = 0;
-                    const s = t - 1 < 0 ? 0 : t - 1,
-                        o = t + 1 >= this.numRows ? this.numRows - 1 : t + 1,
-                        a = e - 1 < 0 ? 0 : e - 1,
-                        i = e + 1 >= this.numCols ? this.numCols - 1 : e + 1;
-                    for (let l = s; l <= o; l++)
-                        for (let s = a; s <= i; s++)
-                            (l === t && s === e) ||
-                                (r += n[this.state[l][s].state]);
-                    return r;
+                    const s = { [d.ALIVE]: 1, [d.DEAD]: 0 };
+                    let a = 0;
+                    const l = t - 1 < 0 ? 0 : t - 1,
+                        r = t + 1 >= this.numRows ? this.numRows - 1 : t + 1,
+                        o = e - 1 < 0 ? 0 : e - 1,
+                        n = e + 1 >= this.numCols ? this.numCols - 1 : e + 1;
+                    for (let i = l; i <= r; i++)
+                        for (let l = o; l <= n; l++)
+                            (i === t && l === e) ||
+                                (a += s[this.state[i][l].state]);
+                    return a;
                 }
                 nextState() {
                     return this.state.map((t, e) =>
                         t.map(
-                            (t, n) =>
-                                new u(
-                                    t.nextState(this.getAliveNeigbhours(e, n))
+                            (t, s) =>
+                                new c(
+                                    t.nextState(this.getAliveNeigbhours(e, s))
                                 )
                         )
                     );
                 }
             },
-            { tmpl: l.a }
+            { tmpl: i.a }
         );
-        const { DEAD: h, ALIVE: d } = c;
-        class f extends r.LightningElement {
-            constructor(...t) {
-                super(...t), (this.board = void 0), (this.size = 15);
+        const { DEAD: u, ALIVE: p } = d;
+        class m extends a.LightningElement {
+            get isAutoPlay() {
+                return !!this.timer;
+            }
+            constructor() {
+                super(),
+                    (this.board = void 0),
+                    (this.height = 18),
+                    (this.width = 18),
+                    (this.timer = void 0),
+                    (this.deadColor = '#F6EEEE'),
+                    (this.aliveColor = '#f15fd9');
+                const t = document.createElement('link');
+                (t.href =
+                    './resources/salesforce-lightning-design-system.min.css'),
+                    (t.rel = 'stylesheet'),
+                    this.template.appendChild(t);
             }
             connectedCallback() {
                 (this.game = this.newGame()),
                     (this.board = this.toBoard(this.game.state));
+            }
+            heightChangeHandler(t) {
+                (this.height = Number(t.target.value)),
+                    (this.game = this.newGame()),
+                    (this.board = this.toBoard(this.game.state));
+            }
+            widthChangeHandler(t) {
+                (this.width = Number(t.target.value)),
+                    (this.game = this.newGame()),
+                    (this.board = this.toBoard(this.game.state));
+            }
+            deadColorChangeHandler(t) {
+                this.deadColor = t.target.value;
+            }
+            aliveColorChangeHandler(t) {
+                this.aliveColor = t.target.value;
+            }
+            play() {
+                this.timer = setInterval(() => this.next(), 1e3);
+            }
+            reset() {
+                this.stop(),
+                    (this.game = this.newGame()),
+                    (this.board = this.toBoard(this.game.state));
+            }
+            stop() {
+                clearInterval(this.timer), (this.timer = null);
             }
             next() {
                 (this.game.state = this.game.nextState()),
@@ -266,31 +712,43 @@
             toBoard(t) {
                 return t.map((t, e) => ({
                     id: e,
-                    cells: t.map((t, n) => ({
-                        className: t.state === d ? 'cell alive' : 'cell dead',
-                        id: `${e}:${n}`
+                    cells: t.map((t, s) => ({
+                        className: t.state === p ? 'cell alive' : 'cell dead',
+                        id: `${e}:${s}`,
+                        style:
+                            t.state === p
+                                ? `background-color: ${this.aliveColor};`
+                                : `background-color: ${this.deadColor};`
                     }))
                 }));
             }
             toggelState(t) {
-                const { rowIndex: e, columnIndex: n } = t.target.dataset;
-                (this.game.state[e][n].state =
-                    this.game.state[e][n].state === d ? h : d),
+                const { rowIndex: e, columnIndex: s } = t.target.dataset;
+                (this.game.state[e][s].state =
+                    this.game.state[e][s].state === p ? u : p),
                     (this.board = this.toBoard(this.game.state));
             }
             newGame() {
-                const t = new Array(this.size).fill(
-                    new Array(this.size).fill(h)
+                const t = Array.from({ length: this.height }, () =>
+                    Array.from({ length: this.width }, () =>
+                        Math.random() > 0.5 ? p : u
+                    )
                 );
-                return new p(t);
+                return new h(t);
             }
         }
-        Object(r.registerDecorators)(f, {
-            publicProps: { size: { config: 0 } },
-            fields: ['board']
+        Object(a.registerDecorators)(m, {
+            fields: [
+                'board',
+                'height',
+                'width',
+                'timer',
+                'deadColor',
+                'aliveColor'
+            ]
         });
-        var m = Object(r.registerComponent)(f, { tmpl: a });
-        const b = Object(r.createElement)('my-app', { is: m });
-        document.querySelector('#main').appendChild(b);
+        var g = Object(a.registerComponent)(m, { tmpl: o });
+        const y = Object(a.createElement)('my-app', { is: g });
+        document.querySelector('#main').appendChild(y);
     }
 ]);

@@ -10,15 +10,13 @@ describe('game-board', () => {
 
     it('should render a matrix with initial state', async () => {
         const board = createElement('my-game-board', {
-            is: App,
-            size: 6
+            is: App
         });
-        board.size = 6;
         document.body.appendChild(board);
 
         await Promise.resolve();
 
         const cells = board.shadowRoot.querySelectorAll('td');
-        expect(cells.length).toBe(36);
+        expect(cells.length).toBe(324);
     });
 });

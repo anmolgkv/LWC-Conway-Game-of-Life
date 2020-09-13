@@ -1,26 +1,136 @@
 <template>
-    <div class="container center">
-        <h1>Conway's game of life</h1>
-        <table>
-            <template for:each={board} for:item="row" for:index="rowIndex">
-                <tr key={row.id}>
-                    <template
-                        for:each={row.cells}
-                        for:item="cell"
-                        for:index="columnIndex"
-                    >
-                        <td
-                            key={cell.id}
-                            class={cell.className}
-                            data-row-index={rowIndex}
-                            data-column-index={columnIndex}
-                            onclick={toggelState}
-                        ></td>
-                    </template>
-                </tr>
-            </template>
-        </table>
+    <!-- <link rel="stylesheet" href="../../../resources/salesforce-lightning-design-system.min.css"/> -->
 
-        <button label="next" onclick={next}>Next</button>
+    <div class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header
+                class="slds-media slds-media_center slds-has-flexi-truncate"
+            >
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        Conway's game of life
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <button
+                        onclick={next}
+                        class="slds-button slds-button_neutral"
+                    >
+                        Next
+                    </button>
+                    <button
+                        onclick={reset}
+                        class="slds-button slds-button_neutral"
+                    >
+                        Reset
+                    </button>
+
+                    <template if:false={isAutoPlay}>
+                        <button
+                            onclick={play}
+                            class="slds-button slds-button_neutral"
+                        >
+                            Play
+                        </button>
+                    </template>
+
+                    <template if:true={isAutoPlay}>
+                        <button
+                            onclick={stop}
+                            class="slds-button slds-button_neutral"
+                        >
+                            Stop
+                        </button>
+                    </template>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_10-of-12">
+                    <table>
+                        <template
+                            for:each={board}
+                            for:item="row"
+                            for:index="rowIndex"
+                        >
+                            <tr key={row.id}>
+                                <template
+                                    for:each={row.cells}
+                                    for:item="cell"
+                                    for:index="columnIndex"
+                                >
+                                    <td
+                                        key={cell.id}
+                                        class={cell.className}
+                                        style={cell.style}
+                                        data-row-index={rowIndex}
+                                        data-column-index={columnIndex}
+                                        onclick={toggelState}
+                                    ></td>
+                                </template>
+                            </tr>
+                        </template>
+                    </table>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="slds-form-element slds-p-around_small">
+                        <label
+                            class="slds-form-element__label"
+                            for="text-input-id-1"
+                            >Size</label
+                        >
+                        <div class="slds-grid">
+                            <div class="slds-form-element__control slds-col">
+                                <input
+                                    type="number"
+                                    value={height}
+                                    onchange={heightChangeHandler}
+                                    placeholder="Enter height of board"
+                                    class="slds-input"
+                                />
+                            </div>
+                            <div class="slds-col slds-p-top_x-small">X</div>
+                            <div class="slds-form-element__control slds-col">
+                                <input
+                                    type="number"
+                                    value={width}
+                                    onchange={widthChangeHandler}
+                                    placeholder="Enter width of board"
+                                    class="slds-input"
+                                />
+                            </div>
+                        </div>
+                        <label
+                            class="slds-form-element__label"
+                            for="text-input-id-1"
+                            >Alive Cell</label
+                        >
+                        <div class="slds-form-element__control">
+                            <input
+                                type="color"
+                                value={aliveColor}
+                                onchange={aliveColorChangeHandler}
+                                class="slds-input"
+                            />
+                        </div>
+
+                        <label
+                            class="slds-form-element__label"
+                            for="text-input-id-1"
+                            >Dead Cell</label
+                        >
+                        <div class="slds-form-element__control">
+                            <input
+                                type="color"
+                                value={deadColor}
+                                onchange={deadColorChangeHandler}
+                                class="slds-input"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
