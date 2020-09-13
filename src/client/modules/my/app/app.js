@@ -6,11 +6,10 @@ import CellStateGame from 'my/cellState';
 const { DEAD, ALIVE } = CellStateGame;
 
 export default class App extends LightningElement {
-    board;
-
-    height = 18;
-    width = 18;
     timer;
+    board;
+    width = 18;
+    height = 18;
     deadColor = '#F6EEEE';
     aliveColor = '#f15fd9';
 
@@ -20,27 +19,21 @@ export default class App extends LightningElement {
 
     constructor() {
         super();
-        const styles = document.createElement('link');
-        styles.href = './resources/salesforce-lightning-design-system.min.css';
-        styles.rel = 'stylesheet';
-        this.template.appendChild(styles);
+        this.loadSlds();
     }
 
     connectedCallback() {
-        this.game = this.newGame();
-        this.board = this.toBoard(this.game.state);
+        this.newGame();
     }
 
     heightChangeHandler(event) {
         this.height = Number(event.target.value);
-        this.game = this.newGame();
-        this.board = this.toBoard(this.game.state);
+        this.newGame();
     }
 
     widthChangeHandler(event) {
         this.width = Number(event.target.value);
-        this.game = this.newGame();
-        this.board = this.toBoard(this.game.state);
+        this.newGame();
     }
 
     deadColorChangeHandler(event) {
@@ -57,8 +50,7 @@ export default class App extends LightningElement {
 
     reset() {
         this.stop();
-        this.game = this.newGame();
-        this.board = this.toBoard(this.game.state);
+        this.newGame();
     }
 
     stop() {
@@ -77,8 +69,6 @@ export default class App extends LightningElement {
                 id: rowIndex,
                 cells: row.map((cell, columnIndex) => {
                     return {
-                        className:
-                            cell.state === ALIVE ? 'cell alive' : 'cell dead',
                         id: `${rowIndex}:${columnIndex}`,
                         style:
                             cell.state === ALIVE
@@ -93,21 +83,28 @@ export default class App extends LightningElement {
     toggelState(event) {
         const { rowIndex, columnIndex } = event.target.dataset;
 
-        this.game.state[rowIndex][columnIndex].state =
-            this.game.state[rowIndex][columnIndex].state === ALIVE
-                ? DEAD
-                : ALIVE;
+        this.game.state[rowIndex][columnIndex].state = !this.game.state[
+            rowIndex
+        ][columnIndex].state;
         this.board = this.toBoard(this.game.state);
     }
 
     newGame() {
         const state = Array.from({ length: this.height }, () => {
-            return Array.from({ length: this.width }, () => {
-                const cellState = Math.random() > 0.5 ? ALIVE : DEAD;
-                return cellState;
-            });
+            return Array.from({ length: this.width }, () =>
+                Math.random() > 0.5 ? ALIVE : DEAD
+            );
         });
 
-        return new Game(state);
+        this.game = new Game(state);
+        this.board = this.toBoard(this.game.state);
+    }
+
+    loadSlds() {
+        const styles = document.createElement('link');
+        styles.href = './resources/salesforce-lightning-design-system.min.css';
+        styles.rel = 'stylesheet';
+
+        this.template.appendChild(styles);
     }
 }
